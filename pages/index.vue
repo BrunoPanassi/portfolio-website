@@ -64,17 +64,22 @@
 </template>
 
 <script setup lang="ts">
-import { onBeforeMount, computed } from 'vue';
+import { computed } from 'vue';
 
-onBeforeMount(() => {
-    document.body.style.backgroundColor = '#0E1013'
+useHead({
+  htmlAttrs: {
+    class: 'html-custom'
+  },
+  bodyAttrs: {
+    class: 'body-custom'
+  }
 })
 
 const aboutNow = computed(() => "Creating Carofy, a project made with Nuxt.js + Vue.js + Typescript, made for content creators, to help create image carousels for instagram and linkedin.")
 
 </script>
 
-<style scoped>
+<style>
 .gradient {
 	height: 100vh;
 	background: linear-gradient(334deg, #6b97f7, #7525e2, #f7137e);
@@ -94,15 +99,20 @@ const aboutNow = computed(() => "Creating Carofy, a project made with Nuxt.js + 
     color: white;
 }
 
+.body-custom {
+    background-color: #0E1013;
+    overflow-x: hidden;
+}
+
+.html-custom {
+    overflow-x: hidden;
+}
+
 .chip {
     border-radius: 15px; 
     width: auto; 
     background-color: white; 
     color: black;
-}
-
-#body {
-    background-color: black;
 }
 
 @keyframes gradient-animation {
