@@ -2,7 +2,8 @@
 export default defineNuxtConfig({
   devtools: { enabled: true },
   modules: [
-    'nuxt-mdi'
+    'nuxt-mdi',
+    '@vueuse/motion/nuxt'
   ],
   css: ['~/assets/css/main.css'],
   postcss: {

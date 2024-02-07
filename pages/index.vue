@@ -1,6 +1,6 @@
 <template>
     <div>
-        <div class="flex h-screen justify-center items-center font-sans gradient">
+        <div class="flex h-screen justify-center items-center font-sans gradient" v-motion-slide-top :delay="500">
             <div class="text-center">
                 <p class="text-3xl font-bold text-zinc-50">Bruno Panassi</p>
                 <p class="text-xl font-semibold text-slate-300">Mid Full Stack Web Developer</p>
@@ -11,14 +11,14 @@
                 </div>
             </div>
         </div>
-        <div class="flex h-screen justify-center items-center font-sans my-5 mx-5 section">
-            <div class="text-center">
+        <div class="flex h-screen justify-center items-center font-sans my-5 mx-5 section" v-motion-slide-visible-once-left :delay="500">
+            <div class="text-left px-10">
                 <p class="text-lg font-semibold text-zinc-50">About Now</p>
                 <p class="text-lg font-normal text-zinc-50">{{ aboutNow }}</p>
             </div>
         </div>
-        <div class="flex h-screen justify-center items-center my-5 mx-5 section icon">
-            <div class="text-center">
+        <div class="flex h-screen justify-center items-center my-5 mx-5 section icon" v-motion-slide-visible-once-right :delay="500">
+            <div class="text-left px-10">
                 <p class="text-lg font-semibold text-zinc-50">Main Stacks</p>
                 <div class="flex flex-wrap justify-center mt-2 space-x-2">
                     <div class="flex text-base space-x-2 mt-2 px-2 chip">
