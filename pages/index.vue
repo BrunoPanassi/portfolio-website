@@ -9,15 +9,23 @@
                     <MdiIcon icon="mdiGithub"/>
                     <MdiIcon icon="mdiEmail"/>
                 </div>
+                <div class="mt-5">
+                    <p @click="goTo('about-now')" class="mt-2 cursor-pointer bg-transparent text-slate-100 text-base font-mono font-semibold py-1 px-2 border border-slate-100 rounded-lg">ABOUT</p>
+                    <p @click="goTo('stacks')" class="mt-2 cursor-pointer bg-transparent text-slate-100 text-base font-mono font-semibold py-1 px-2 border border-slate-100 rounded-lg">STACKS</p>
+                    <p class="mt-2 cursor-pointer bg-transparent text-slate-100 text-base font-mono font-semibold py-1 px-2 border border-slate-100 rounded-lg">PROFESSIONAL EXPERIENCE</p>
+                    <p class="mt-2 cursor-pointer bg-transparent text-slate-100 text-base font-mono font-semibold py-1 px-2 border border-slate-100 rounded-lg">PROJECTS</p>
+                </div>
             </div>
         </div>
-        <div class="flex h-screen justify-center items-center font-sans my-5 mx-5 section" v-motion-slide-visible-once-left :delay="500">
+        <div class="flex h-screen justify-center items-center font-sans my-5 mx-5 section" ref="aboutNowBlock" v-motion-slide-visible-once-left :delay="500">
             <div class="text-left px-10">
-                <p class="text-lg font-semibold text-zinc-50">About Now</p>
-                <p class="text-lg font-normal text-zinc-50">{{ aboutNow }}</p>
+                <button v-for="(value, index) of aboutMeButtons" @click="selectAboutMe(index)" :class="getBackgroundOnSelectedButton(index)">
+                    {{ value.text }}
+                </button>
+                <p class="mt-5 text-lg font-normal text-zinc-50" style="white-space: pre-wrap; line-height: 1.6;">{{ selectedParagraph }}</p>
             </div>
         </div>
-        <div class="flex h-screen justify-center items-center my-5 mx-5 section icon" v-motion-slide-visible-once-right :delay="500">
+        <div class="flex h-screen justify-center items-center my-5 mx-5 section icon" ref="stacks" v-motion-slide-visible-once-right :delay="500">
             <div class="text-left px-10">
                 <p class="text-lg font-semibold text-zinc-50">Main Stacks</p>
                 <div class="flex flex-wrap justify-center mt-2 space-x-2">
@@ -57,6 +65,12 @@
                         </div>
                         <span>Java</span>
                     </div>
+                    <div class="flex text-base space-x-2 mt-2 px-2 chip">
+                        <div style="font-size: 30px">
+                            <MdiIcon icon="mdiTailwind"/>
+                        </div>
+                        <span>Tailwind</span>
+                    </div>
                 </div>
             </div>
         </div>
@@ -65,6 +79,51 @@
 
 <script setup lang="ts">
 import { computed } from 'vue';
+
+const aboutNowBlock = ref<HTMLDivElement>();
+const stacks = ref<HTMLDivElement>();
+
+const aboutMeButtons = [
+    {
+        id: 0,
+        text: "Myself",
+        paragraph: "As a full stack web developer I've helped companies in the car rental, real estate, agriculture and water treatment businesses build and maintain their web applications legible and scalable for this last 6 years.\nI tend to be someone who can solve bugs in legacy systems and ongoing projects, coming up with ideas for improvements and refactoring the code, communicating clearly and having continuous learning."
+    },
+    {
+        id: 1,
+        text: "Now",
+        paragraph: "Now I'm working at Veolia, where I'm responsible for resolving all bugs, and creating new implementations of the new project made in Vue.js + Quasar.\nI am currently developing an application to help content creators create image carousels to post on their social networks.\nThis project is initially being done with Vue.js, Nuxt, Vuetify, Typescript and Pinia."
+    },
+    {
+        id: 2,
+        text: "Future",
+        paragraph: "I'm also studying the next technologies I want to learn, such as: Docker, AWS and Kafka.\nI'm looking to evolve into a Senior Developer role and everything I do now is to become one in the future.\nI'm open to working in full stack roles that can open up new opportunities for me to grow with."
+    }
+]
+
+let aboutMeButtonSelected = ref(0)
+
+function selectAboutMe(index: number) {
+    aboutMeButtonSelected.value = index
+}
+
+function getBackgroundOnSelectedButton(index: number) {
+    let bgClass = aboutMeButtonSelected.value == index ? 'bg-stone-300 text-black' : 'bg-transparent text-zinc-50'
+    return `cursor-pointer ${bgClass} text-lg font-mono py-1 px-2 border border-slate-100 rounded-lg mr-2`
+}
+
+const selectedParagraph = computed(() => aboutMeButtons.find((b) => b.id == aboutMeButtonSelected.value)?.paragraph)
+
+const blockRefToGo = [
+    {
+        id: 'about-now',
+        block: aboutNowBlock
+    },
+    {
+        id: 'stacks',
+        block: stacks
+    }
+]
 
 useHead({
   htmlAttrs: {
@@ -75,7 +134,15 @@ useHead({
   }
 })
 
-const aboutNow = computed(() => "Creating Carofy, a project made with Nuxt.js + Vue.js + Typescript, made for content creators, to help create image carousels for instagram and linkedin.")
+function goTo(idSection: string) {
+    let block = blockRefToGo.find((b) => b.id == idSection)?.block
+    if (block?.value) {
+        block.value.scrollIntoView({
+            behavior: 'smooth'
+        });
+    }
+    
+}
 
 </script>
 
