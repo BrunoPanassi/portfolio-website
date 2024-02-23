@@ -8,8 +8,8 @@ export default defineNuxtConfig({
     }
   },
   modules: [
-    'nuxt-mdi',
-    '@vueuse/motion/nuxt'
+    '@vueuse/motion/nuxt',
+    'nuxt-icon'
   ],
   css: ['~/assets/css/main.css'],
   postcss: {

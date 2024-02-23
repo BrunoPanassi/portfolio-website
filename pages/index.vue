@@ -5,9 +5,9 @@
                 <p class="text-3xl font-bold text-zinc-50">Bruno Panassi</p>
                 <p class="text-xl font-semibold text-slate-300">Mid Full Stack Web Developer</p>
                 <div class="flex justify-center space-x-5 pt-3 icon">
-                    <MdiIcon icon="mdiLinkedin"/>
-                    <MdiIcon icon="mdiGithub"/>
-                    <MdiIcon icon="mdiEmail"/>
+                    <Icon name="mdi:linkedin"/>
+                    <Icon name="mdi:github"/>
+                    <Icon name="mdi:email"/>
                 </div>
                 <div class="mt-5">
                     <p @click="goTo('about-now')" class="mt-2 cursor-pointer bg-transparent text-slate-100 text-base font-mono font-semibold py-1 px-2 border border-slate-100 rounded-lg">ABOUT</p>
@@ -29,47 +29,11 @@
             <div class="text-left px-10">
                 <p class="text-lg font-semibold text-zinc-50">Main Stacks</p>
                 <div class="flex flex-wrap justify-center mt-2 space-x-2">
-                    <div class="flex text-base space-x-2 mt-2 px-2 chip">
-                        <div style="font-size: 30px">
-                            <MdiIcon icon="mdiVuejs"/>
+                    <div class="flex text-base space-x-2 mt-2 px-2 chip" v-for="(stack) of stackIcons">
+                        <div class="py-1">
+                            <Icon :name="stack.icon" color="black"/>
                         </div>
-                        <span>Vue.js</span>
-                    </div>
-                    <div class="flex text-base space-x-2 mt-2 px-2 chip">
-                        <div style="font-size: 30px">
-                            <MdiIcon icon="mdiVuetify"/>
-                        </div>
-                        <span>Vuetify</span>
-                    </div>
-                    <div class="flex text-base space-x-2 mt-2 px-2 chip">
-                        <div style="font-size: 30px">
-                            <MdiIcon icon="mdiNuxt"/>
-                        </div>
-                        <span>Nuxt.js</span>
-                    </div>
-                    <div class="flex text-base space-x-2 mt-2 px-2 chip">
-                        <div style="font-size: 30px">
-                            <MdiIcon icon="mdiLanguageTypescript"/>
-                        </div>
-                        <span>Typescript</span>
-                    </div>
-                    <div class="flex text-base space-x-2 mt-2 px-2 chip">
-                        <div style="font-size: 30px">
-                            <MdiIcon icon="mdiLanguageJavascript"/>
-                        </div>
-                        <span>Javascript</span>
-                    </div>
-                    <div class="flex text-base space-x-2 mt-2 px-2 chip">
-                        <div style="font-size: 30px">
-                            <MdiIcon icon="mdiLanguageJava"/>
-                        </div>
-                        <span>Java</span>
-                    </div>
-                    <div class="flex text-base space-x-2 mt-2 px-2 chip">
-                        <div style="font-size: 30px">
-                            <MdiIcon icon="mdiTailwind"/>
-                        </div>
-                        <span>Tailwind</span>
+                        <span class="py-2">{{ stack.text }}</span>
                     </div>
                 </div>
             </div>
@@ -82,6 +46,57 @@ import { computed } from 'vue';
 
 const aboutNowBlock = ref<HTMLDivElement>();
 const stacks = ref<HTMLDivElement>();
+
+const stackIcons = [
+    {
+        text: "Vue.js",
+        icon: "vscode-icons:file-type-vue"
+    },
+    {
+        text: "Vuetify",
+        icon: "devicon:vuetify"
+    },
+    {
+        text: "Vite",
+        icon: "vscode-icons:file-type-vite"
+    },
+    {
+        text: "Nuxt",
+        icon: "vscode-icons:file-type-nuxt"
+    },
+    {
+        text: "Quasar",
+        icon: "vscode-icons:file-type-light-quasar"
+    },
+    {
+        text: "Javascript",
+        icon: "skill-icons:javascript"
+    },
+    {
+        text: "Typescript",
+        icon: "skill-icons:typescript"
+    },
+    {
+        text: "Tailwind",
+        icon: "vscode-icons:file-type-tailwind"
+    },
+    {
+        text: "Java",
+        icon: "devicon:java"
+    },
+    {
+        text: "JUnit",
+        icon: "simple-icons:junit5"
+    },
+    {
+        text: "Spring Boot",
+        icon: "devicon:spring"
+    },
+    {
+        text: "Postgres",
+        icon: "logos:postgresql"
+    }
+]
 
 const aboutMeButtons = [
     {
