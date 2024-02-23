@@ -5,15 +5,15 @@
                 <p class="text-3xl font-bold text-zinc-50">Bruno Panassi</p>
                 <p class="text-xl font-semibold text-slate-300">Mid Full Stack Web Developer</p>
                 <div class="flex justify-center space-x-5 pt-3 icon">
-                    <Icon name="mdi:linkedin"/>
-                    <Icon name="mdi:github"/>
-                    <Icon name="mdi:email"/>
+                    <a v-for="(link) of mainLinks"
+                    :href="link.ref" target="_blank" rel="noopener noreferrer">
+                        <Icon :name="link.icon"/>
+                    </a>
                 </div>
                 <div class="mt-5">
-                    <p @click="goTo('about-now')" class="mt-2 cursor-pointer bg-transparent text-slate-100 text-base font-mono font-semibold py-1 px-2 border border-slate-100 rounded-lg">ABOUT</p>
-                    <p @click="goTo('stacks')" class="mt-2 cursor-pointer bg-transparent text-slate-100 text-base font-mono font-semibold py-1 px-2 border border-slate-100 rounded-lg">STACKS</p>
-                    <p class="mt-2 cursor-pointer bg-transparent text-slate-100 text-base font-mono font-semibold py-1 px-2 border border-slate-100 rounded-lg">PROFESSIONAL EXPERIENCE</p>
-                    <p class="mt-2 cursor-pointer bg-transparent text-slate-100 text-base font-mono font-semibold py-1 px-2 border border-slate-100 rounded-lg">PROJECTS</p>
+                    <p v-for="(link) of secundaryLinks" @click="goTo(link.goTo)" class="mt-2 cursor-pointer bg-transparent text-slate-100 text-base font-mono font-semibold py-1 px-2 border border-slate-100 rounded-lg">
+                        {{ link.title }}
+                    </p>
                 </div>
             </div>
         </div>
@@ -38,6 +38,34 @@
                 </div>
             </div>
         </div>
+        <div class="flex justify-center items-center my-5 mx-5 section icon px-16 py-12" ref="professionalExperience" v-motion-slide-visible-once-bottom :delay="500">
+            <!-- TW Elements is free under AGPL, with commercial license required for specific uses. See more details: https://tw-elements.com/license/ and contact us for queries at tailwind@mdbootstrap.com --> 
+            <ol class="border-l border-neutral-300 dark:border-neutral-500">
+                <li v-for="(work) of professionalExperienceTimeline">
+                    <div class="flex-start flex items-center pt-3">
+                    <div class="-ml-[5px] mr-3 h-[9px] w-[9px] rounded-full bg-neutral-300 dark:bg-neutral-500"></div>
+                    <p class="text-sm text-neutral-500 dark:text-neutral-300">
+                        {{ work.date }}
+                    </p>
+                    </div>
+                    <div class="mb-6 ml-4 mt-2">
+                        <h4 class="mb-1.5 text-xl font-bold">{{ work.company }}</h4>
+                        <p class="mb-3 text-xl font-semibold text-neutral-200 dark:text-neutral-300">
+                            Responsibilities:
+                        </p>
+                        <p class="mb-3 text-xl text-neutral-500 dark:text-neutral-300" style="white-space: pre-wrap;">
+                           {{ work.responsibilities }}
+                        </p>
+                        <p class="mb-3 text-xl font-semibold text-neutral-200 dark:text-neutral-300">
+                            Results:
+                        </p>
+                        <p class="mb-3 text-xl text-neutral-500 dark:text-neutral-300" style="white-space: pre-wrap;">
+                           {{ work.results }}
+                        </p>
+                    </div>
+                </li>
+            </ol>
+        </div>
     </div>
 </template>
 
@@ -46,6 +74,45 @@ import { computed } from 'vue';
 
 const aboutNowBlock = ref<HTMLDivElement>();
 const stacks = ref<HTMLDivElement>();
+const professionalExperience = ref<HTMLDivElement>();
+
+const mainLinks = [
+    {
+        ref: "https://www.linkedin.com/in/bruno-henrique-bb3a19141/?locale=en_US",
+        icon: "mdi:linkedin"
+    },
+    {
+        ref: "https://github.com/BrunoPanassi",
+        icon: "mdi:github"
+    },
+    {
+        ref: "mailto:bhenrique95@outlook.com",
+        icon: "mdi:email"
+    }
+]
+
+const secundaryLinks = [
+    {
+        goTo: "about-now",
+        title: "ABOUT"
+    },
+    {
+        goTo: "stacks",
+        title: "STACKS"
+    },
+    {
+        goTo: "professional-experience",
+        title: "PROFESSIONAL EXPERIENCE"
+    },
+    {
+        goTo: "",
+        title: "PROJECTS"
+    },
+    {
+        goTo: "",
+        title: "OTHERS"
+    }
+]
 
 const stackIcons = [
     {
@@ -59,6 +126,10 @@ const stackIcons = [
     {
         text: "Vite",
         icon: "vscode-icons:file-type-vite"
+    },
+    {
+        text: "Pinia",
+        icon: "logos:pinia"
     },
     {
         text: "Nuxt",
@@ -116,6 +187,27 @@ const aboutMeButtons = [
     }
 ]
 
+const professionalExperienceTimeline = [
+    {
+        date: "01.01.2018 - 01.01.2021",
+        company: "FMX Soluções em Tecnologia",
+        responsibilities: "Javascript (ES6), Vue.js, Spring Boot, JPA, Hibernate and SQL Server developer on car rent, bovine tract automation and real estate construction systems.",
+        results: "On the last client project, was made a executable in Python to convert a spreadsheet to a .txt file, where this file was later used in a software. \nThis task was performed manually and lasted at least 4 hours, after the Python executable conversion, it started to last 10 seconds to execute the whole task."
+    },
+    {
+        date: "01.01.2021 - 01.09.2022",
+        company: "Solinftec",
+        responsibilities: "Web Developer with Vue.js/Vuetify, Typescript, Spring Boot and Oracle (PL/SQL) on a cane harvest automation project, and currently on a project focused on the logistics and management of the delivery of fungicides and herbicides to the field.",
+        results: "On the harvest automation project, a client could receive a loaded truck from another client to fuel your power plant.\nThis information needed to be seen by the two clients at the sametime when its been updated.\nIt was developed with Vue.js Observable and maded some changes in database procedures."
+    },
+    {
+        date: "01.2022 - moment",
+        company: "Veolia",
+        responsibilities: "Web Developer with Vue.js/Quasar, Spring Boot and Postgres on a water quality treatment project being used in many cities of Brazil and actually in New Zealand.",
+        results: "The main system has two interfaces, where the new one was made with Vue.js. All tasks to resolve problems/bugs about the new interface has been send to a new module, and i’amresponsible for the whole module now, to control all the tasks and deliver it in the deadline."
+    }
+]
+
 let aboutMeButtonSelected = ref(0)
 
 function selectAboutMe(index: number) {
@@ -137,6 +229,10 @@ const blockRefToGo = [
     {
         id: 'stacks',
         block: stacks
+    },
+    {
+        id: 'professional-experience',
+        block: professionalExperience
     }
 ]
 
@@ -171,7 +267,6 @@ function goTo(idSection: string) {
 }
 
 .section {
-    height: 100vh;
     background-color: #17181B;
     border-radius: 15px;
 }
