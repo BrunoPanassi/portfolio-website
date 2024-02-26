@@ -38,10 +38,10 @@
                 </div>
             </div>
         </div>
-        <div class="flex justify-center items-center my-5 mx-5 section icon px-16 py-12" ref="professionalExperience" v-motion-slide-visible-once-bottom :delay="500">
+        <div class="flex justify-center items-center my-5 mx-5 section icon px-5 py-12" ref="professionalExperience" v-motion-slide-visible-once-bottom :delay="500">
             <!-- TW Elements is free under AGPL, with commercial license required for specific uses. See more details: https://tw-elements.com/license/ and contact us for queries at tailwind@mdbootstrap.com --> 
             <ol class="border-l border-neutral-300 dark:border-neutral-500">
-                <li v-for="(work) of professionalExperienceTimeline">
+                <li v-for="(work) of professionalExperienceTimeline" v-motion-slide-visible-once-left>
                     <div class="flex-start flex items-center pt-3">
                     <div class="-ml-[5px] mr-3 h-[9px] w-[9px] rounded-full bg-neutral-300 dark:bg-neutral-500"></div>
                     <p class="text-sm text-neutral-500 dark:text-neutral-300">
