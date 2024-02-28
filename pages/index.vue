@@ -66,7 +66,51 @@
                 </li>
             </ol>
         </div>
-    </div>
+        <div class="flex h-screen justify-center items-center my-5 mx-5 section icon px-5 py-12" ref="projects" v-motion-slide-visible-once-right :delay="500">
+            <div
+                class="block rounded-lg p-6 bg-neutral-800">
+                <div class="inline-flex items-center justify-between w-full">
+                    <h5
+                        class="mb-2 text-xl font-medium leading-tight text-neutral-800 dark:text-neutral-50">
+                        text-to-carousel
+                    </h5>
+                    <a class="mb-4" href="https://github.com/BrunoPanassi/text_to_carousel" target="_blank" rel="noopener noreferrer">
+                        <Icon name="mdi:github"/>
+                    </a>
+                </div>
+                <p class="mb-4 text-base text-neutral-600 dark:text-neutral-200">
+                    Create images to instagram/linkedin carousel from simple texts
+                </p>
+                <div class="inline-flex items-center justify-between w-full">
+                    <div>
+                        <Icon name="vscode-icons:file-type-vue" size="26px" />
+                        <Icon name="devicon:vuetify" size="26px"/>
+                        <Icon name="vscode-icons:file-type-nuxt" size="26px"/>
+                        <Icon name="skill-icons:typescript" size="26px"/>
+                    </div>
+                    <a class="mb-4" href="https://text-to-carousel.vercel.app/" target="_blank" rel="noopener noreferrer">
+                        <button
+                            type="button"
+                            class="inline-block rounded bg-green-800 px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-white "
+                            data-te-ripple-init
+                            data-te-ripple-color="light">
+                            Demo
+                        </button>
+                    </a>
+                </div>
+                </div>
+            </div>
+        </div>
+        <div class="flex h-screen justify-center items-center my-5 mx-5 section icon px-5 py-12" ref="others" v-motion-slide-visible-once-bottom :delay="500">
+            <div>
+                <a class="mr-2" href="https://dev.to/brunopanassi" target="_blank" rel="noopener noreferrer">
+                    <Icon name="fa6-brands:dev" size="42px"/>
+                </a>
+                <a href="https://stackoverflow.com/users/15636147/brunopanassi" target="_blank" rel="noopener noreferrer">
+                    <Icon name="devicon:stackoverflow" size="42px"/>
+                </a>
+            </div>
+        </div>
 </template>
 
 <script setup lang="ts">
@@ -75,6 +119,8 @@ import { computed } from 'vue';
 const aboutNowBlock = ref<HTMLDivElement>();
 const stacks = ref<HTMLDivElement>();
 const professionalExperience = ref<HTMLDivElement>();
+const projects = ref<HTMLDivElement>();
+const others = ref<HTMLDivElement>();
 
 const mainLinks = [
     {
@@ -105,11 +151,11 @@ const secundaryLinks = [
         title: "PROFESSIONAL EXPERIENCE"
     },
     {
-        goTo: "",
+        goTo: "projects",
         title: "PROJECTS"
     },
     {
-        goTo: "",
+        goTo: "others",
         title: "OTHERS"
     }
 ]
@@ -233,6 +279,14 @@ const blockRefToGo = [
     {
         id: 'professional-experience',
         block: professionalExperience
+    },
+    {
+        id: 'projects',
+        block: projects
+    },
+    {
+        id: 'others',
+        block: others
     }
 ]
 
