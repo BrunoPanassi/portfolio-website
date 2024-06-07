@@ -266,28 +266,16 @@
                         <p class="text-4xl text-semibold">Frameworks, linguagens e ferramentas</p> 
                     </div>
                     <div class="flex-grow text-center px-4 mb-4 space-y-2">
-                        <p class="font-thin text-lg sm:text-xl">Front-end</p>
-                        <div class="flex items-center justify-center space-x-2">
-                            <vueIcon :size="iconSize"/>
-                            <nuxtIcon :size="iconSize"/>
-                            <vuetifyIcon :size="iconSize"/>
-                            <quasarIcon :size="iconSize"/>
-                            <javascriptIcon :size="iconSize"/>
-                            <tailwindIcon :size="iconSize"/>
-                        </div>
-                        <p class="font-thin text-lg sm:text-xl">Back-end</p>
-                        <div class="flex items-center justify-center space-x-2">
-                            <javaIcon :size="iconSize"/>
-                            <springBootIcon :size="iconSize"/>
-                            <pythonIcon :size="iconSize" />
-                            <typescriptIcon :size="iconSize"/>
-                        </div>
-                        <p class="font-thin text-lg sm:text-xl">Banco de dados</p>
-                        <div class="flex items-center justify-center space-x-2">
-                            <postgresqlIcon :size="iconSize" />
-                            <mysqlIcon :size="42" />
-                            <sqlIcon :size="iconSize" />
-                            <oracleIcon :size="52" />
+                        <div v-for="(stack) of techByStacks">
+                            <p class="font-thin text-lg sm:text-xl mb-2">
+                                {{ stack.stack }}
+                            </p>
+                            <div class="flex items-center justify-center space-x-2" >
+                                <Icon 
+                                    v-for="(tech) of stack.techs" 
+                                    :name="tech"
+                                />
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -415,20 +403,6 @@
 
 <script setup lang="ts">
 import { computed } from 'vue';
-import vueIcon from "@/icons/vueIcon.vue"
-import nuxtIcon from '~/icons/nuxtIcon.vue';
-import vuetifyIcon from "@/icons/vuetifyIcon.vue"
-import quasarIcon from "@/icons/quasarIcon.vue"
-import javascriptIcon from "~/icons/javascriptIcon.vue"
-import typescriptIcon from "~/icons/typescriptIcon.vue"
-import tailwindIcon from "~/icons/tailwindIcon.vue"
-import javaIcon from "~/icons/javaIcon.vue"
-import springBootIcon from "~/icons/springBootIcon.vue"
-import pythonIcon from "~/icons/pythonIcon.vue"
-import postgresqlIcon from "~/icons/postgresqlIcon.vue"
-import mysqlIcon from "~/icons/mysqlIcon.vue"
-import sqlIcon from "~/icons/sqlIcon.vue"
-import oracleIcon from "~/icons/oracleIcon.vue"
 import brunoPanassiIcon from "~/icons/brunoPanassiIcon.vue"
 
 function onToggle() {
@@ -441,8 +415,6 @@ const stacks = ref<HTMLDivElement>();
 const professionalExperience = ref<HTMLDivElement>();
 const projects = ref<HTMLDivElement>();
 const others = ref<HTMLDivElement>();
-
-const iconSize = ref(32)
 
 const mainLinks = [
     {
@@ -479,6 +451,47 @@ const secundaryLinks = [
     {
         goTo: "others",
         title: "OTHERS"
+    }
+]
+
+const techByStacks = [
+    {
+        stack: "Linguagens",
+        techs: [
+            "akar-icons:javascript-fill",
+            "akar-icons:typescript-fill",
+            "ri:java-fill",
+            "akar-icons:python-fill",
+            "akar-icons:node-fill"
+        ]
+    },
+    {
+        stack: "Frameworks",
+        techs: [
+            "mdi:vuejs",
+            "mdi:nuxt",
+            "mdi:vuetify",
+            "simple-icons:quasar",
+            "mdi:tailwind",
+            "bxl:spring-boot"
+        ]
+    },
+    {
+        stack: "Banco de Dados",
+        techs: [
+            "simple-icons:postgresql",
+            "simple-icons:mysql",
+            "fontisto:oracle"
+        ]
+    },
+    {
+        stack: "Ferramentas",
+        techs: [
+            "mdi:docker",
+            "mdi:git",
+            "solar:figma-bold",
+            "mage:photoshop"
+        ]
     }
 ]
 
