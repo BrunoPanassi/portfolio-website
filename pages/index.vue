@@ -281,20 +281,14 @@
                 </div>
             </div>
         </div>
-        <div class="flex h-screen my-5 mx-5 text-white p-12 justify-center items-center bg-gradient-to-r from-slate-900 to-neutral-900">
-            <div class="mx-auto">
-                <div class="card md:flex max-w-3xl divide-x-0 sm:divide-x">
-                    <div class="h-60 w-60 mx-auto md:mr-6 flex-shrink-0 text-center items-center justify-center">
-                        <div class="flex mb-6 items-center justify-center">
-                            <svg width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-scroll-text"><path d="M15 12h-5"/><path d="M15 8h-5"/><path d="M19 17V5a2 2 0 0 0-2-2H4"/><path d="M8 21h12a2 2 0 0 0 2-2v-1a1 1 0 0 0-1-1H11a1 1 0 0 0-1 1v1a2 2 0 1 1-4 0V5a2 2 0 1 0-4 0v2a1 1 0 0 0 1 1h3"/></svg>
-                        </div>
+        <div class="flex my-5 mx-5 text-white p-12 justify-center items-center bg-gradient-to-r from-slate-900 to-neutral-900">
+            <div class="m-auto">
+                <div class="card md:flex max-w-3xl sm:divide-x">
+                    <div class="w-60 m-auto md:flex md:mr-6 flex-shrink-0 text-center justify-center items-center">
                         <p class="text-4xl text-semibold">Vamos tirar a sua idéia do papel</p>
                     </div>
-                    <div class="flex items-center justify-center text-center px-4 mb-4 space-y-2">
-                        <button class="bg-neutral-200 hover:bg-neutral-300 text-gray-800 font-bold lg:ml-6 py-2 px-4 rounded inline-flex space-x-2">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-calendar"><path d="M8 2v4"/><path d="M16 2v4"/><rect width="18" height="18" x="3" y="4" rx="2"/><path d="M3 10h18"/></svg>
-                            <span>Agendar</span>
-                        </button>
+                    <div class="mt-12">
+                        <CalendlyInlineWidget class="md:ml-6" v-bind="calendlyOptions" />
                     </div>
                 </div>
             </div>
@@ -415,6 +409,10 @@ const stacks = ref<HTMLDivElement>();
 const professionalExperience = ref<HTMLDivElement>();
 const projects = ref<HTMLDivElement>();
 const others = ref<HTMLDivElement>();
+
+const calendlyOptions = {
+    url: 'https://calendly.com/bhenrique95'
+}
 
 const mainLinks = [
     {

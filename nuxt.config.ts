@@ -9,7 +9,8 @@ export default defineNuxtConfig({
   },
   modules: [
     '@vueuse/motion/nuxt',
-    'nuxt-icon'
+    'nuxt-icon',
+    "nuxt-calendly"
   ],
   css: ['~/assets/css/main.css'],
   postcss: {
