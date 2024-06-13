@@ -286,7 +286,7 @@
                 <div class="mt-24 card max-w-3xl">
                     <div class=" mx-auto text-center items-center justify-center">
                         <p class="text-4xl text-semibold">Agende uma call</p>
-                        <p class="text-lg font-thin">Vamos bater um papo e entender mais sobre, sem compromisso.</p> 
+                        <p class="text-lg font-thin">Vamos bater um papo e entender mais sobre o que você precisa, sem compromisso.</p> 
                         <button class="mt-6 space-x-2 bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded inline-flex items-center">
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-calendar"><path d="M8 2v4"/><path d="M16 2v4"/><rect width="18" height="18" x="3" y="4" rx="2"/><path d="M3 10h18"/></svg>
                             <CalendlyPopupButton v-bind="calendlyOptions" :root-element="roofElement"/>
@@ -300,13 +300,35 @@
             <div class="mx-auto">
                 <div class="mt-24 card max-w-3xl">
                     <div class="mx-auto text-center items-center justify-center">
-                        <p class="text-4xl text-semibold">Ou se preferir, fale comigo</p>
-                        <p class="text-lg font-thin">Tire a sua idéia do papel.</p> 
-                        <button class="mt-6">
+                        <p class="text-4xl text-semibold">Fale comigo</p>
+                        <p class="text-lg font-thin mb-6">Tire a sua idéia do papel.</p> 
+                        <a href="https://wa.me/5518997648833?text=Oi!%20Estou%20interessado%20em%20seus%20servi%C3%A7os%20e%20gostaria%20de%20saber%20mais%20sobre%20isso.%20Voc%C3%AA%20poderia%20me%20enviar%20mais%20informa%C3%A7%C3%B5es?%20Obrigado!" target="_blank">
                             <Icon name="mdi:whatsapp" size="42"/>
-                        </button>
-                        <a href="https://wa.me/5518997648833?text=Oi!%20Estou%20interessado%20em%20seus%20servi%C3%A7os%20e%20gostaria%20de%20saber%20mais%20sobre%20isso.%20Voc%C3%AA%20poderia%20me%20enviar%20mais%20informa%C3%A7%C3%B5es?%20Obrigado!" target="_blank">Clique</a>
+                        </a>
                     </div>
+                </div>
+            </div>
+        </div>
+        <div class="flex h-screen my-5 mx-5 text-white p-12 justify-center items-center bg-gradient-to-r from-slate-900 to-stone-900">
+            <div class="md:px-12">
+                <div class="divide-y divide-gray-100">
+                    <details class="group" v-for="(qa) of questionsAndAnswers">
+                        <summary
+                            class="flex cursor-pointer list-none items-center justify-between py-4 text-lg font-medium text-secondary-900 group-open:text-primary-500">
+                            {{ qa.question }}
+                            <div>
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                    stroke="currentColor" class="block h-5 w-5 group-open:hidden">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                    stroke="currentColor" class="hidden h-5 w-5 group-open:block">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 12h-15" />
+                                </svg>
+                            </div>
+                        </summary>
+                        <div class="pb-4 text-secondary-500">{{ qa.answer }}</div>
+                    </details>
                 </div>
             </div>
         </div>
@@ -433,6 +455,29 @@ const calendlyOptions = {
     url: 'https://calendly.com/bhenrique95?hide_gdpr_banner=1',
     text: "Agendar"
 }
+
+const questionsAndAnswers = [
+    {
+        question: "É utilizado Wordpress?",
+        answer: "Não, é utilizado Nuxt para a criação de landing pages junto com o Tailwind para estilização de classes."
+    },
+    {
+        question: "O Nuxt é bom para landing pages?",
+        answer: "Sim, o Nuxt possui SSR o que facilita para a performance e também para o SEO da página."
+    },
+    {
+        question: "Você fornece serviços de hospedagem?",
+        answer: "Não, o projeto é entregue com os arquivos necessários para deploy, e é feito o encaminhamento para algum serviço de hospedagem de confiança."
+    },
+    {
+        question: "Qual o tempo médio para a entrega de um projeto",
+        answer: "Procuramos dar foco na prioridade do cliente junto com a complexidade do seu projeto, porém um tempo médio para a criação de uma landing page seria de 7 dias."
+    },
+    {
+        question: "Qual o preço mínimo para um projeto?",
+        answer: "O preço pode começar em 800$, podendo variar de acordo com a sua prioridade."
+    }
+]
 
 const mainLinks = [
     {
