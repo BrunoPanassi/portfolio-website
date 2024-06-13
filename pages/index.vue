@@ -281,19 +281,36 @@
                 </div>
             </div>
         </div>
-        <div class="flex my-5 mx-5 text-white p-12 justify-center items-center bg-gradient-to-r from-slate-900 to-neutral-900">
-            <div class="m-auto">
-                <div class="card md:flex max-w-3xl sm:divide-x">
-                    <div class="w-60 m-auto md:flex md:mr-6 flex-shrink-0 text-center justify-center items-center">
-                        <p class="text-4xl text-semibold">Vamos tirar a sua idéia do papel</p>
+        <div class="flex h-screen my-5 mx-5 text-white p-12 justify-center items-center bg-gradient-to-r from-slate-900 to-neutral-900">
+            <div class="mx-auto">
+                <div class="mt-24 card max-w-3xl">
+                    <div class=" mx-auto text-center items-center justify-center">
+                        <p class="text-4xl text-semibold">Agende uma call</p>
+                        <p class="text-lg font-thin">Vamos bater um papo e entender mais sobre, sem compromisso.</p> 
+                        <button class="mt-6 space-x-2 bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded inline-flex items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-calendar"><path d="M8 2v4"/><path d="M16 2v4"/><rect width="18" height="18" x="3" y="4" rx="2"/><path d="M3 10h18"/></svg>
+                            <CalendlyPopupButton v-bind="calendlyOptions" :root-element="roofElement"/>
+                        </button>
                     </div>
-                    <div class="mt-12">
-                        <CalendlyInlineWidget class="md:ml-6" v-bind="calendlyOptions" />
+                    <div ref="roofElement"></div>
+                </div>
+            </div>
+        </div>
+        <div class="flex h-screen my-5 mx-5 text-white p-12 justify-center items-center bg-gradient-to-r from-slate-900 to-neutral-900">
+            <div class="mx-auto">
+                <div class="mt-24 card max-w-3xl">
+                    <div class="mx-auto text-center items-center justify-center">
+                        <p class="text-4xl text-semibold">Ou se preferir, fale comigo</p>
+                        <p class="text-lg font-thin">Tire a sua idéia do papel.</p> 
+                        <button class="mt-6">
+                            <Icon name="mdi:whatsapp" size="42"/>
+                        </button>
+                        <a href="https://wa.me/5518997648833?text=Oi!%20Estou%20interessado%20em%20seus%20servi%C3%A7os%20e%20gostaria%20de%20saber%20mais%20sobre%20isso.%20Voc%C3%AA%20poderia%20me%20enviar%20mais%20informa%C3%A7%C3%B5es?%20Obrigado!" target="_blank">Clique</a>
                     </div>
                 </div>
             </div>
         </div>
-        <div class=" justify-center items-center my-5 mx-5 bg-gradient-to-r from-slate-900 to-stone-900 icon px-5 py-12" ref="professionalExperience" v-motion-slide-visible-once-bottom :delay="500">
+        <div class="justify-center items-center my-5 mx-5 bg-gradient-to-r from-slate-900 to-stone-900 icon px-5 py-12" ref="professionalExperience" v-motion-slide-visible-once-bottom :delay="500">
             <!-- TW Elements is free under AGPL, with commercial license required for specific uses. See more details: https://tw-elements.com/license/ and contact us for queries at tailwind@mdbootstrap.com --> 
             <div class="max-w-2xl my-12 mx-auto text-center">
                 <h2 class="font-heading text-3xl leading-[1.1] md:text-4xl">Experiência</h2>
@@ -410,8 +427,11 @@ const professionalExperience = ref<HTMLDivElement>();
 const projects = ref<HTMLDivElement>();
 const others = ref<HTMLDivElement>();
 
+const roofElement = ref()
+
 const calendlyOptions = {
-    url: 'https://calendly.com/bhenrique95'
+    url: 'https://calendly.com/bhenrique95?hide_gdpr_banner=1',
+    text: "Agendar"
 }
 
 const mainLinks = [
