@@ -31,46 +31,37 @@
                 class="w-full md:block md:w-auto hidden"
                 id="mobile-menu"
                 >
-                <ul class="flex flex-col mt-4 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium">
+                <ul class="flex flex-col mt-4 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium items-end justify-end">
                     <li>
-                    <a
-                        href="#"
-                        class="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
-                        aria-current="page"
-                    >
-                        Home
-                    </a>
-                    </li>
-                    <li>
-                    <a
-                        href="#"
-                        class="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
+                    <button
+                        class="block py-2 pr-4 pl-3 text-gray-700 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
+                        @click="goTo('sobre')"
                     >
                         Sobre
-                    </a>
+                    </button>
                     </li>
                     <li>
-                    <a
-                        href="#"
-                        class="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
+                    <button
+                        @click="goTo('cinco-passos')"
+                        class="block py-2 pr-4 pl-3 text-gray-700 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
                     >
                         Cinco Passos
-                    </a>
+                    </button>
                     </li>
                     <li>
-                    <a
-                        href="#"
-                        class="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
+                    <button
+                        @click="goTo('cta')"
+                        class="block py-2 pr-4 pl-3 text-gray-700 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
                     >
                         Contato
-                    </a>
+                    </button>
                     </li>
                 </ul>
                 </div>
 
             </div>
         </nav>
-        <div class="lg:h-screen mt-0 mb-5 mx-5 text-white justify-center items-center bg-gradient-to-r from-slate-900 to-neutral-900">
+        <div class="lg:h-screen mt-0 mb-5 mx-5 text-white justify-center items-center bg-gradient-to-r from-slate-900 to-neutral-900" ref="home">
             <div class="px-6 py-6 text-center md:px-12 lg:text-left">
                 <div class="w-100 2xl:mx-24 lg:my-28 xl:my-32 2xl:my-20">
                     <div class="grid items-center gap-12 lg:grid-cols-2 mb-12">
@@ -84,12 +75,14 @@
                             <div class="space-x-4">
                                 <button
                                 type="button"
-                                class="inline-block rounded-lg bg-neutral-950 px-6 pb-2 pt-2.5 text-sm font-medium uppercase leading-normal text-white shadow-primary-3 transition duration-150 ease-in-out hover:bg-primary-accent-300 hover:shadow-primary-2 focus:bg-primary-accent-300 focus:shadow-primary-2 focus:outline-none focus:ring-0 active:bg-primary-600 active:shadow-primary-2 motion-reduce:transition-none dark:shadow-black/30 dark:hover:shadow-dark-strong dark:focus:shadow-dark-strong dark:active:shadow-dark-strong">
+                                class="inline-block rounded-lg bg-neutral-950 px-6 pb-2 pt-2.5 text-sm font-medium uppercase leading-normal text-white shadow-primary-3 transition duration-150 ease-in-out hover:bg-primary-accent-300 hover:shadow-primary-2 focus:bg-primary-accent-300 focus:shadow-primary-2 focus:outline-none focus:ring-0 active:bg-primary-600 active:shadow-primary-2 motion-reduce:transition-none dark:shadow-black/30 dark:hover:shadow-dark-strong dark:focus:shadow-dark-strong dark:active:shadow-dark-strong"
+                                @click="goTo('cinco-passos')">
                                     + Sobre
                                 </button>
                                 <button
                                 type="button"
-                                class="inline-block rounded-lg bg-green-900 px-6 pb-2 pt-2.5 text-sm font-medium uppercase leading-normal text-white shadow-primary-3 transition duration-150 ease-in-out hover:bg-primary-accent-300 hover:shadow-primary-2 focus:bg-primary-accent-300 focus:shadow-primary-2 focus:outline-none focus:ring-0 active:bg-primary-600 active:shadow-primary-2 motion-reduce:transition-none dark:shadow-black/30 dark:hover:shadow-dark-strong dark:focus:shadow-dark-strong dark:active:shadow-dark-strong">
+                                class="inline-block rounded-lg bg-green-900 px-6 pb-2 pt-2.5 text-sm font-medium uppercase leading-normal text-white shadow-primary-3 transition duration-150 ease-in-out hover:bg-primary-accent-300 hover:shadow-primary-2 focus:bg-primary-accent-300 focus:shadow-primary-2 focus:outline-none focus:ring-0 active:bg-primary-600 active:shadow-primary-2 motion-reduce:transition-none dark:shadow-black/30 dark:hover:shadow-dark-strong dark:focus:shadow-dark-strong dark:active:shadow-dark-strong"
+                                @click="goTo('cta')">
                                     Me interesso
                                 </button>
                             </div>
@@ -132,7 +125,7 @@
                 </div>
             </div>
         </div>
-        <div class="flex lg:h-screen my-5 mx-5 text-white p-12 justify-center items-center bg-gradient-to-r from-slate-900 to-neutral-900">
+        <div class="flex lg:h-screen my-5 mx-5 text-white p-12 justify-center items-center bg-gradient-to-r from-slate-900 to-neutral-900" ref="cincoPassos">
             <div class="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
                 <div class="max-w-2xl mx-auto text-center">
                     <h2 class="font-heading text-3xl leading-[1.1] md:text-4xl">O método criado para dar foco no seu projeto</h2>
@@ -199,12 +192,12 @@
                 </div>
             </div>
         </div>
-        <div class="h-screen justify-center items-center space-y-6 py-12 md:py-12 lg:py-60 px-12 bg-gradient-to-r from-slate-900 to-stone-900 my-5 mx-5 text-white" v-motion-slide-visible-once-right :delay="500">
+        <div class="h-screen justify-center items-center space-y-6 py-12 md:py-12 lg:py-60 px-12 bg-gradient-to-r from-slate-900 to-stone-900 my-5 mx-5 text-white">
             <div class="mx-auto flex max-w-[58rem] flex-col items-center space-y-4 text-center">
                 <h2 class="font-heading text-3xl leading-[1.1] sm:text-3xl md:text-4xl">O que posso fazer por você</h2>
                 <p class="max-w-[85%] leading-normal text-muted-foreground sm:text-lg sm:leading-7">Qual seria a sua necessidade para o seu negócio.</p>
             </div>
-            <div class="mx-auto grid justify-center gap-4 sm:grid-cols-2 md:max-w-[64rem] md:grid-cols-3">
+            <div class="mx-auto grid justify-center gap-4 sm:grid-cols-2 md:max-w-[64rem] md:grid-cols-3" v-motion-slide-visible-once-right :delay="500">
                 <div class="relative overflow-hidden rounded-lg lg:border bg-background p-2">
                     <div class="flex h-[180px] flex-col justify-between rounded-md p-6">
                         <svg width="42" height="42" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-mails"><rect width="16" height="13" x="6" y="4" rx="2"/><path d="m22 7-7.1 3.78c-.57.3-1.23.3-1.8 0L6 7"/><path d="M2 8v11c0 1.1.9 2 2 2h14"/></svg>
@@ -227,14 +220,14 @@
                     <div class="flex h-[180px] flex-col justify-between rounded-md p-6">
                         <svg width="42" height="42" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-message-circle"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></svg>
                         <div class="space-y-2">
-                            <h3 class="font-bold">Redirecionamento para Contato</h3>
+                            <h3 class="font-bold">Redirecionamento</h3>
                             <p class="text-sm text-muted-foreground">Deixe a melhor forma para que o seu cliente possa contatar você.</p>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="flex h-screen my-5 mx-5 text-white p-12 justify-center items-center bg-gradient-to-r from-slate-900 to-stone-900">
+        <div class="flex h-screen my-5 mx-5 text-white p-12 justify-center items-center bg-gradient-to-r from-slate-900 to-stone-900" ref="sobre">
             <div class="mx-auto">
                 <div class="max-w-2xl mx-auto text-center">
                     <h2 class="font-heading text-3xl leading-[1.1] md:text-4xl mb-12">Sobre mim</h2>
@@ -249,10 +242,14 @@
                         <p class="font-thin text-lg sm:text-3xl mt-2 mb-3">Experiência criando aplicações web para grandes empresas. Expertise em Landing Page com foco em performance.</p>
                         <div class="text-black space-x-2">
                             <button class="text-white border px-3 py-1.5 rounded-lg text-base">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-linkedin"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>
+                                <a href="https://www.linkedin.com/in/bruno-henrique-panassi/" target="_blank" rel="noopener noreferrer">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-linkedin"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>
+                                </a>
                             </button>
                             <button class="text-white border px-3 py-1.5 rounded-lg text-base">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-github"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg>
+                                <a href="https://github.com/BrunoPanassi" target="_blank" rel="noopener noreferrer">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-github"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg>
+                                </a>
                             </button>
                         </div>
                     </div>
@@ -296,7 +293,7 @@
                 </div>
             </div>
         </div>
-        <div class="flex my-5 mx-5 text-white py-32 px-12 lg:p-32 justify-center items-center bg-gradient-to-r from-slate-900 to-neutral-900">
+        <div class="flex my-5 mx-5 text-white py-32 px-12 lg:p-32 justify-center items-center bg-gradient-to-r from-slate-900 to-neutral-900" ref="cta">
             <div class="mx-auto">
                 <div class="card max-w-3xl">
                     <div class="mx-auto text-center items-center justify-center">
@@ -304,7 +301,7 @@
                         <p class="text-lg font-thin mb-6">A sua nova página está á um clique de distância</p> 
                         <a 
                             href="https://wa.me/5518997648833?text=Oi!%20Estou%20interessado%20em%20seus%20servi%C3%A7os%20e%20gostaria%20de%20saber%20mais%20sobre%20isso.%20Voc%C3%AA%20poderia%20me%20enviar%20mais%20informa%C3%A7%C3%B5es?%20Obrigado!" 
-                            target="_blank"
+                            target="_blank" rel="noopener noreferrer"
                             class="block w-full rounded-lg bg-emerald-900 px-6 pb-2 pt-2.5 text-sm font-medium uppercase leading-normal text-white shadow-primary-3 hover:bg-emerald-800"
                         >
                             Me Interesso
@@ -313,7 +310,7 @@
                 </div>
             </div>
         </div>
-        <div class="flex my-5 mx-5 text-white p-12 justify-center items-center bg-gradient-to-r from-slate-900 to-stone-900">
+        <div class="flex my-5 mx-5 text-white p-12 justify-center items-center bg-gradient-to-r from-slate-900 to-stone-900" ref="questions">
             <div class="md:px-12">
                 <div class="divide-y divide-gray-100">
                     <details class="group" v-for="(qa) of questionsAndAnswers">
@@ -340,24 +337,24 @@
             <div class="px-4 pt-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8">
                 <div class="grid gap-10 row-gap-6 mb-8 sm:grid-cols-2 lg:grid-cols-4">
                     <div class="sm:col-span-2">
-                        <a href="/" aria-label="Go home" title="Company" class="border rounded-lg lg:border-0 inline-flex items-center">
+                        <button @click="goTo('home')" aria-label="Go home" title="Company" class="border rounded-lg lg:border-0 inline-flex items-center">
                             <brunoPanassiIcon :size="95" />
-                        </a>
+                        </button>
                     </div>
                     <div class="space-y-2 text-sm">
                         <p class="text-base font-bold tracking-wide text-white">Contato</p>
                         <div class="flex">
                             <p class="mr-1 text-white">Telefone:</p>
-                            <a href="tel:850-123-5021" aria-label="Our phone" title="Our phone" class="transition-colors duration-300 text-deep-purple-accent-400 hover:text-deep-purple-800">850-123-5021</a>
+                            <a href="tel:18-99764-8833" aria-label="Our phone" title="Our phone" class="transition-colors duration-300 text-deep-purple-accent-400 hover:text-deep-purple-800">18-99764-8833</a>
                         </div>
                         <div class="flex">
                             <p class="mr-1 text-white">Email:</p>
-                            <a href="mailto:info@lorem.mail" aria-label="Our email" title="Our email" class="transition-colors duration-300 text-deep-purple-accent-400 hover:text-deep-purple-800">info@lorem.mail</a>
+                            <a href="mailto:bhenrique95@outlook.com" aria-label="Our email" title="Our email" class="transition-colors duration-300 text-deep-purple-accent-400 hover:text-deep-purple-800">bhenrique95@outlook.com</a>
                         </div>
                         <div class="flex">
                             <p class="mr-1 text-white">Endereço:</p>
                             <a href="https://www.google.com/maps" target="_blank" rel="noopener noreferrer" aria-label="Our address" title="Our address" class="transition-colors duration-300 text-deep-purple-accent-400 hover:text-deep-purple-800">
-                            312 Lovely Street, NY
+                            Avenida Antonio Cavasana 765, Araçatuba - SP
                             </a>
                         </div>
                     </div>
@@ -377,14 +374,14 @@
                 </div>
                 <div class="flex flex-col-reverse justify-between pt-5 pb-10 border-t lg:flex-row">
                     <p class="text-sm text-gray-600">
-                    © Copyright 2020 Lorem Inc. All rights reserved.
+                    © Copyright 2024 Bruno Panassi. Todos os direitos reservados.
                     </p>
                     <ul class="flex flex-col mb-3 space-y-2 lg:mb-0 sm:space-y-0 sm:space-x-5 sm:flex-row">
                     <li>
-                        <a href="/" class="text-sm text-gray-600 transition-colors duration-300 hover:text-deep-purple-accent-400">F.A.Q</a>
+                        <button @click="goTo('questions')" class="text-sm text-gray-600 transition-colors duration-300 hover:text-deep-purple-accent-400">F.A.Q</button>
                     </li>
                     <li>
-                        <a href="/" class="text-sm text-gray-600 transition-colors duration-300 hover:text-deep-purple-accent-400">Home</a>
+                        <button @click="goTo('home')" class="text-sm text-gray-600 transition-colors duration-300 hover:text-deep-purple-accent-400">Home</button>
                     </li>
                     </ul>
                 </div>
@@ -407,6 +404,11 @@ const stacks = ref<HTMLDivElement>();
 const professionalExperience = ref<HTMLDivElement>();
 const projects = ref<HTMLDivElement>();
 const others = ref<HTMLDivElement>();
+const cincoPassos = ref<HTMLDivElement>();
+const cta = ref<HTMLDivElement>();
+const sobre = ref<HTMLDivElement>();
+const home = ref<HTMLDivElement>();
+const questions = ref<HTMLDivElement>();
 
 const roofElement = ref()
 
@@ -440,7 +442,7 @@ const questionsAndAnswers = [
 
 const mainLinks = [
     {
-        ref: "https://www.linkedin.com/in/bruno-henrique-bb3a19141/?locale=en_US",
+        ref: "https://www.linkedin.com/in/bruno-henrique-panassi/",
         icon: "mdi:linkedin"
     },
     {
@@ -644,6 +646,26 @@ const blockRefToGo = [
     {
         id: 'others',
         block: others
+    },
+    {
+        id: 'cinco-passos',
+        block: cincoPassos
+    },
+    {
+        id: 'cta',
+        block: cta
+    },
+    {
+        id: 'sobre',
+        block: sobre
+    },
+    {
+        id: 'home',
+        block: home
+    },
+    {
+        id: 'questions',
+        block: questions
     }
 ]
 
