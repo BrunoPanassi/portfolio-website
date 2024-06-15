@@ -67,7 +67,10 @@
                     <div class="grid items-center gap-12 lg:grid-cols-2 mb-12">
                         <div class="mt-12 lg:mt-0">
                             <h1 class="mt-2 leading-none lg:leading-tight mb-6 text-5xl font-normal tracking-tight md:text-6xl xl:text-7xl">
-                                Sua landing page <br /> <span class="text-primary">que você precisa pra ontem</span>
+                                Sua landing page 
+                                <span class="text-primary">
+                                    que você precisa <br />pra&nbsp;<span class="typewriter"></span>
+                                </span>
                             </h1>
                             <h2 class="mt-2 leading-normal mb-6 text-xl lg:text-2xl font-light tracking-tight">
                                 Com um método baseado em 5 passos
@@ -345,7 +348,7 @@
                         <p class="text-base font-bold tracking-wide text-white">Contato</p>
                         <div class="flex">
                             <p class="mr-1 text-white">Telefone:</p>
-                            <a href="tel:18-99764-8833" aria-label="Our phone" title="Our phone" class="transition-colors duration-300 text-deep-purple-accent-400 hover:text-deep-purple-800">18-99764-8833</a>
+                            <a href="tel:+5518997648833" aria-label="Our phone" title="Our phone" class="transition-colors duration-300 text-deep-purple-accent-400 hover:text-deep-purple-800">(18) 99764-8833</a>
                         </div>
                         <div class="flex">
                             <p class="mr-1 text-white">Email:</p>
@@ -391,7 +394,6 @@
 </template>
 
 <script setup lang="ts">
-import { computed } from 'vue';
 import brunoPanassiIcon from "~/icons/brunoPanassiIcon.vue"
 
 function onToggle() {
@@ -399,11 +401,6 @@ function onToggle() {
     mobileMenu?.classList.toggle('hidden');
 }
 
-const aboutNowBlock = ref<HTMLDivElement>();
-const stacks = ref<HTMLDivElement>();
-const professionalExperience = ref<HTMLDivElement>();
-const projects = ref<HTMLDivElement>();
-const others = ref<HTMLDivElement>();
 const cincoPassos = ref<HTMLDivElement>();
 const cta = ref<HTMLDivElement>();
 const sobre = ref<HTMLDivElement>();
@@ -437,44 +434,6 @@ const questionsAndAnswers = [
     {
         question: "Qual o preço mínimo para um projeto?",
         answer: "O preço pode começar em R$800, podendo variar de acordo com a sua prioridade e complexidade."
-    }
-]
-
-const mainLinks = [
-    {
-        ref: "https://www.linkedin.com/in/bruno-henrique-panassi/",
-        icon: "mdi:linkedin"
-    },
-    {
-        ref: "https://github.com/BrunoPanassi",
-        icon: "mdi:github"
-    },
-    {
-        ref: "mailto:bhenrique95@outlook.com",
-        icon: "mdi:email"
-    }
-]
-
-const secundaryLinks = [
-    {
-        goTo: "about-now",
-        title: "ABOUT"
-    },
-    {
-        goTo: "stacks",
-        title: "STACKS"
-    },
-    {
-        goTo: "professional-experience",
-        title: "PROFESSIONAL EXPERIENCE"
-    },
-    {
-        goTo: "projects",
-        title: "PROJECTS"
-    },
-    {
-        goTo: "others",
-        title: "OTHERS"
     }
 ]
 
@@ -519,134 +478,7 @@ const techByStacks = [
     }
 ]
 
-const stackIcons = [
-    {
-        text: "Vue.js",
-        icon: "vscode-icons:file-type-vue"
-    },
-    {
-        text: "Vuetify",
-        icon: "devicon:vuetify"
-    },
-    {
-        text: "Vite",
-        icon: "vscode-icons:file-type-vite"
-    },
-    {
-        text: "Pinia",
-        icon: "logos:pinia"
-    },
-    {
-        text: "Nuxt",
-        icon: "vscode-icons:file-type-nuxt"
-    },
-    {
-        text: "Quasar",
-        icon: "vscode-icons:file-type-light-quasar"
-    },
-    {
-        text: "Javascript",
-        icon: "skill-icons:javascript"
-    },
-    {
-        text: "Typescript",
-        icon: "skill-icons:typescript"
-    },
-    {
-        text: "Tailwind",
-        icon: "vscode-icons:file-type-tailwind"
-    },
-    {
-        text: "Java",
-        icon: "devicon:java"
-    },
-    {
-        text: "JUnit",
-        icon: "simple-icons:junit5"
-    },
-    {
-        text: "Spring Boot",
-        icon: "devicon:spring"
-    },
-    {
-        text: "Postgres",
-        icon: "logos:postgresql"
-    }
-]
-
-const aboutMeButtons = [
-    {
-        id: 0,
-        text: "Myself",
-        paragraph: "As a full stack web developer I've helped companies in the car rental, real estate, agriculture and water treatment businesses build and maintain their web applications legible and scalable for this last 6 years.\nI tend to be someone who can solve bugs in legacy systems and ongoing projects, coming up with ideas for improvements and refactoring the code, communicating clearly and having continuous learning."
-    },
-    {
-        id: 1,
-        text: "Now",
-        paragraph: "Now I'm working at Veolia, where I'm responsible for resolving all bugs, and creating new implementations of the new project made in Vue.js + Quasar.\nI am currently developing an application to help content creators create image carousels to post on their social networks.\nThis project is initially being done with Vue.js, Nuxt, Vuetify, Typescript and Pinia."
-    },
-    {
-        id: 2,
-        text: "Future",
-        paragraph: "I'm also studying the next technologies I want to learn, such as: Docker, AWS and Kafka.\nI'm looking to evolve into a Senior Developer role and everything I do now is to become one in the future.\nI'm open to working in full stack roles that can open up new opportunities for me to grow with."
-    }
-]
-
-const professionalExperienceTimeline = [
-    {
-        date: "01.01.2018 - 01.01.2021",
-        company: "FMX Soluções em Tecnologia",
-        responsibilities: "Javascript (ES6), Vue.js, Spring Boot, JPA, Hibernate and SQL Server developer on car rent, bovine tract automation and real estate construction systems.",
-        results: "On the last client project, was made a executable in Python to convert a spreadsheet to a .txt file, where this file was later used in a software. \nThis task was performed manually and lasted at least 4 hours, after the Python executable conversion, it started to last 10 seconds to execute the whole task."
-    },
-    {
-        date: "01.01.2021 - 01.09.2022",
-        company: "Solinftec",
-        responsibilities: "Web Developer with Vue.js/Vuetify, Typescript, Spring Boot and Oracle (PL/SQL) on a cane harvest automation project, and currently on a project focused on the logistics and management of the delivery of fungicides and herbicides to the field.",
-        results: "On the harvest automation project, a client could receive a loaded truck from another client to fuel your power plant.\nThis information needed to be seen by the two clients at the sametime when its been updated.\nIt was developed with Vue.js Observable and maded some changes in database procedures."
-    },
-    {
-        date: "01.2022 - moment",
-        company: "Veolia",
-        responsibilities: "Web Developer with Vue.js/Quasar, Spring Boot and Postgres on a water quality treatment project being used in many cities of Brazil and actually in New Zealand.",
-        results: "The main system has two interfaces, where the new one was made with Vue.js. All tasks to resolve problems/bugs about the new interface has been send to a new module, and i’amresponsible for the whole module now, to control all the tasks and deliver it in the deadline."
-    }
-]
-
-let aboutMeButtonSelected = ref(0)
-
-function selectAboutMe(index: number) {
-    aboutMeButtonSelected.value = index
-}
-
-function getBackgroundOnSelectedButton(index: number) {
-    let bgClass = aboutMeButtonSelected.value == index ? 'bg-stone-300 text-black' : 'bg-transparent text-zinc-50'
-    return `cursor-pointer ${bgClass} text-lg font-mono py-1 px-2 border border-slate-100 rounded-lg mr-2`
-}
-
-const selectedParagraph = computed(() => aboutMeButtons.find((b) => b.id == aboutMeButtonSelected.value)?.paragraph)
-
 const blockRefToGo = [
-    {
-        id: 'about-now',
-        block: aboutNowBlock
-    },
-    {
-        id: 'stacks',
-        block: stacks
-    },
-    {
-        id: 'professional-experience',
-        block: professionalExperience
-    },
-    {
-        id: 'projects',
-        block: projects
-    },
-    {
-        id: 'others',
-        block: others
-    },
     {
         id: 'cinco-passos',
         block: cincoPassos
@@ -691,24 +523,6 @@ function goTo(idSection: string) {
 </script>
 
 <style>
-.gradient {
-	height: 100vh;
-	background: linear-gradient(334deg, #6b97f7, #7525e2, #f7137e);
-    background-size: 180% 180%;
-	animation: gradient-animation 6s ease infinite;
-    border-radius: 15px;
-}
-
-.section {
-    background-color: #17181B;
-    border-radius: 15px;
-}
-
-.icon {
-    font-size: 30px; 
-    color: white;
-}
-
 .body-custom {
     background-color: #0E1013;
     overflow-x: hidden;
@@ -717,23 +531,72 @@ function goTo(idSection: string) {
 .html-custom {
     overflow-x: hidden;
 }
+@keyframes typing {
+  0.0000%, 27.3488% { content: ""; }
+  1.1395%, 26.2093% { content: "o"; }
+  2.2791%, 25.0698% { content: "on"; }
+  3.4186%, 23.9302% { content: "ont"; }
+  4.5581%, 22.7907% { content: "onte"; }
+  5.6977%, 21.6512% { content: "ontem"; }
 
-.chip {
-    border-radius: 15px; 
-    width: auto; 
-    background-color: white; 
-    color: black;
+  30.7674%, 51.2791% { content: ""; }
+  31.9070%, 50.1395% { content: "h"; }
+  33.0465%, 49.0000% { content: "ho"; }
+  34.1860%, 47.8605% { content: "hoj"; }
+  35.3256%, 46.7209% { content: "hoje"; }
+
+  54.6977%, 75.2093% { content: ""; }
+  55.8372%, 74.0698% { content: "a"; }
+  56.9767%, 72.9302% { content: "am"; }
+  58.1163%, 71.7907% { content: "ama"; }
+  59.2558%, 70.6512% { content: "aman"; }
+  60.3953%, 69.5116% { content: "amanh"; }
+  61.5349%, 68.3721% { content: "amanhã"; }
 }
 
-@keyframes gradient-animation {
-	0% {
-		background-position: 0% 50%;
-	}
-	50% {
-		background-position: 100% 50%;
-	}
-	100% {
-		background-position: 0% 50%;
-	}
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+.typewriter {
+  --caret: currentcolor;
+}
+
+.typewriter::before {
+  content: "";
+  animation: typing 13.5s infinite;
+}
+
+.typewriter::after {
+  content: "";
+  border-right: 1px solid var(--caret);
+  animation: blink 0.5s linear infinite;
+}
+
+.typewriter.thick::after {
+  border-right: 1ch solid var(--caret);
+}
+
+.typewriter.nocaret::after {
+  border-right: 0;
+}
+
+
+@media (prefers-reduced-motion) {
+  .typewriter::after {
+    animation: none;
+  }
+  
+  @keyframes sequencePopup {
+    0%, 100% { content: "ontem"; }
+    25% { content: "hoje"; }
+    50% { content: "amanhã"; }
+  }
+
+  .typewriter::before {
+    content: "ontem";
+    animation: sequencePopup 12s linear infinite;
+  }
 }
 </style>
