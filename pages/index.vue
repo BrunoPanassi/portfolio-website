@@ -78,7 +78,7 @@
                             <h1 class="mt-2 leading-none lg:leading-tight mb-6 text-5xl font-normal tracking-tight md:text-6xl xl:text-7xl">
                                 Sua landing page <br /> <span class="text-primary">que você precisa pra ontem</span>
                             </h1>
-                            <h2 class="mt-2 leading-normal mb-6 text-2xl font-light tracking-tight">
+                            <h2 class="mt-2 leading-normal mb-6 text-xl lg:text-2xl font-light tracking-tight">
                                 Com um método baseado em 5 passos
                             </h2>
                             <div class="space-x-4">
@@ -219,7 +219,7 @@
                         <svg width="42" height="42" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-calendar"><path d="M8 2v4"/><path d="M16 2v4"/><rect width="18" height="18" x="3" y="4" rx="2"/><path d="M3 10h18"/></svg>
                         <div class="space-y-2">
                             <h3 class="font-bold">Agendamento</h3>
-                            <p class="text-sm text-muted-foreground">Integração com o calendly para o seu cliente poder agendar com você de forma rápida e ágil.</p>
+                            <p class="text-sm text-muted-foreground">Integração com o Calendly para facilitar a sua vida.</p>
                         </div>
                     </div>
                 </div>
@@ -281,11 +281,11 @@
                 </div>
             </div>
         </div>
-        <div class="flex h-screen my-5 mx-5 text-white p-12 justify-center items-center bg-gradient-to-r from-slate-900 to-neutral-900">
+        <div class="flex my-5 mx-5 text-white p-12 lg:py-32 justify-center items-center bg-gradient-to-r from-slate-900 to-neutral-900">
             <div class="mx-auto">
-                <div class="mt-24 card max-w-3xl">
+                <div class="card max-w-3xl">
                     <div class=" mx-auto text-center items-center justify-center">
-                        <p class="text-4xl text-semibold">Agende uma call</p>
+                        <p class="text-4xl font-semibold">Agende uma call</p>
                         <p class="text-lg font-thin">Vamos bater um papo e entender mais sobre o que você precisa, sem compromisso.</p> 
                         <button class="mt-6 space-x-2 bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded inline-flex items-center">
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-calendar"><path d="M8 2v4"/><path d="M16 2v4"/><rect width="18" height="18" x="3" y="4" rx="2"/><path d="M3 10h18"/></svg>
@@ -296,20 +296,24 @@
                 </div>
             </div>
         </div>
-        <div class="flex h-screen my-5 mx-5 text-white p-12 justify-center items-center bg-gradient-to-r from-slate-900 to-neutral-900">
+        <div class="flex my-5 mx-5 text-white py-32 px-12 lg:p-32 justify-center items-center bg-gradient-to-r from-slate-900 to-neutral-900">
             <div class="mx-auto">
-                <div class="mt-24 card max-w-3xl">
+                <div class="card max-w-3xl">
                     <div class="mx-auto text-center items-center justify-center">
-                        <p class="text-4xl text-semibold">Fale comigo</p>
-                        <p class="text-lg font-thin mb-6">Tire a sua idéia do papel.</p> 
-                        <a href="https://wa.me/5518997648833?text=Oi!%20Estou%20interessado%20em%20seus%20servi%C3%A7os%20e%20gostaria%20de%20saber%20mais%20sobre%20isso.%20Voc%C3%AA%20poderia%20me%20enviar%20mais%20informa%C3%A7%C3%B5es?%20Obrigado!" target="_blank">
-                            <Icon name="mdi:whatsapp" size="42"/>
+                        <p class="text-4xl font-semibold">Tire a sua idéia do papel</p>
+                        <p class="text-lg font-thin mb-6">A sua nova página está á um clique de distância</p> 
+                        <a 
+                            href="https://wa.me/5518997648833?text=Oi!%20Estou%20interessado%20em%20seus%20servi%C3%A7os%20e%20gostaria%20de%20saber%20mais%20sobre%20isso.%20Voc%C3%AA%20poderia%20me%20enviar%20mais%20informa%C3%A7%C3%B5es?%20Obrigado!" 
+                            target="_blank"
+                            class="block w-full rounded-lg bg-emerald-900 px-6 pb-2 pt-2.5 text-sm font-medium uppercase leading-normal text-white shadow-primary-3 hover:bg-emerald-800"
+                        >
+                            Me Interesso
                         </a>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="flex h-screen my-5 mx-5 text-white p-12 justify-center items-center bg-gradient-to-r from-slate-900 to-stone-900">
+        <div class="flex my-5 mx-5 text-white p-12 justify-center items-center bg-gradient-to-r from-slate-900 to-stone-900">
             <div class="md:px-12">
                 <div class="divide-y divide-gray-100">
                     <details class="group" v-for="(qa) of questionsAndAnswers">
@@ -332,106 +336,61 @@
                 </div>
             </div>
         </div>
-        <div class="justify-center items-center my-5 mx-5 bg-gradient-to-r from-slate-900 to-stone-900 icon px-5 py-12" ref="professionalExperience" v-motion-slide-visible-once-bottom :delay="500">
-            <!-- TW Elements is free under AGPL, with commercial license required for specific uses. See more details: https://tw-elements.com/license/ and contact us for queries at tailwind@mdbootstrap.com --> 
-            <div class="max-w-2xl my-12 mx-auto text-center">
-                <h2 class="font-heading text-3xl leading-[1.1] md:text-4xl">Experiência</h2>
-                <p class="max-w-2xl mx-auto mt-4 text-base text-gray-400 leading-relaxed md:text-2xl">
-                    Por onde eu trabalhei e quais foram os resultados
-                </p>
-            </div>
-            <ol class="px-6 lg:px-24">
-                <li v-for="(work) of professionalExperienceTimeline" v-motion-slide-visible-once-left>
-                    <div class="flex-start flex items-center pt-3">
-                    <div class="-ml-[5px] mr-3 h-[9px] w-[9px] rounded-full bg-neutral-300 dark:bg-neutral-500"></div>
-                    <p class="text-sm text-neutral-500 dark:text-neutral-300">
-                        {{ work.date }}
-                    </p>
+        <div class="flex mt-5 mx-5 text-white p-12 justify-center items-center bg-neutral-900">
+            <div class="px-4 pt-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8">
+                <div class="grid gap-10 row-gap-6 mb-8 sm:grid-cols-2 lg:grid-cols-4">
+                    <div class="sm:col-span-2">
+                        <a href="/" aria-label="Go home" title="Company" class="border rounded-lg lg:border-0 inline-flex items-center">
+                            <brunoPanassiIcon :size="95" />
+                        </a>
                     </div>
-                    <div class="mb-6 ml-4 mt-2">
-                        <h4 class="mb-1.5 text-xl font-bold">{{ work.company }}</h4>
-                        <p class="mb-3 text-xl font-semibold text-neutral-200 dark:text-neutral-300">
-                            Responsibilities:
-                        </p>
-                        <p class="mb-3 text-xl text-neutral-500 dark:text-neutral-300" style="white-space: pre-wrap;">
-                           {{ work.responsibilities }}
-                        </p>
-                        <p class="mb-3 text-xl font-semibold text-neutral-200 dark:text-neutral-300">
-                            Results:
-                        </p>
-                        <p class="mb-3 text-xl text-neutral-500 dark:text-neutral-300" style="white-space: pre-wrap;">
-                           {{ work.results }}
-                        </p>
-                    </div>
-                </li>
-            </ol>
-        </div>
-        <div class="flex h-screen justify-center items-center font-sans my-5 mx-5 bg-gradient-to-r from-slate-900 to-stone-900" ref="aboutNowBlock" v-motion-slide-visible-once-left :delay="500">
-            <div class="text-left px-10">
-                <button v-for="(value, index) of aboutMeButtons" @click="selectAboutMe(index)" :class="getBackgroundOnSelectedButton(index)">
-                    {{ value.text }}
-                </button>
-                <p class="mt-5 text-lg font-normal text-zinc-50" style="white-space: pre-wrap; line-height: 1.6;">{{ selectedParagraph }}</p>
-            </div>
-        </div>
-        <div class="flex h-screen justify-center items-center my-5 mx-5 bg-gradient-to-r from-slate-900 to-stone-900 icon" ref="stacks" v-motion-slide-visible-once-right :delay="500">
-            <div class="text-left px-10">
-                <p class="text-lg font-semibold text-zinc-50">Main Stacks</p>
-                <div class="flex flex-wrap justify-center mt-2 space-x-2">
-                    <div class="flex text-base space-x-2 mt-2 px-2 chip" v-for="(stack) of stackIcons">
-                        <div class="py-1">
-                            <Icon :name="stack.icon" color="black"/>
+                    <div class="space-y-2 text-sm">
+                        <p class="text-base font-bold tracking-wide text-white">Contato</p>
+                        <div class="flex">
+                            <p class="mr-1 text-white">Telefone:</p>
+                            <a href="tel:850-123-5021" aria-label="Our phone" title="Our phone" class="transition-colors duration-300 text-deep-purple-accent-400 hover:text-deep-purple-800">850-123-5021</a>
                         </div>
-                        <span class="py-2">{{ stack.text }}</span>
+                        <div class="flex">
+                            <p class="mr-1 text-white">Email:</p>
+                            <a href="mailto:info@lorem.mail" aria-label="Our email" title="Our email" class="transition-colors duration-300 text-deep-purple-accent-400 hover:text-deep-purple-800">info@lorem.mail</a>
+                        </div>
+                        <div class="flex">
+                            <p class="mr-1 text-white">Endereço:</p>
+                            <a href="https://www.google.com/maps" target="_blank" rel="noopener noreferrer" aria-label="Our address" title="Our address" class="transition-colors duration-300 text-deep-purple-accent-400 hover:text-deep-purple-800">
+                            312 Lovely Street, NY
+                            </a>
+                        </div>
                     </div>
-                </div>
-            </div>
-        </div>
-        <div class="flex h-screen justify-center items-center my-5 mx-5 bg-gradient-to-r from-slate-900 to-stone-900 icon px-5 py-12" ref="projects" v-motion-slide-visible-once-right :delay="500">
-            <div
-                class="block rounded-lg p-6 bg-neutral-800">
-                <div class="inline-flex items-center justify-between w-full">
-                    <h5
-                        class="mb-2 text-xl font-medium leading-tight text-neutral-800 dark:text-neutral-50">
-                        text-to-carousel
-                    </h5>
-                    <a class="mb-4" href="https://github.com/BrunoPanassi/text_to_carousel" target="_blank" rel="noopener noreferrer">
-                        <Icon name="mdi:github"/>
-                    </a>
-                </div>
-                <p class="mb-4 text-base text-neutral-600 dark:text-neutral-200">
-                    Create images to instagram/linkedin carousel from simple texts
-                </p>
-                <div class="inline-flex items-center justify-between w-full">
                     <div>
-                        <Icon name="vscode-icons:file-type-vue" size="26px" />
-                        <Icon name="devicon:vuetify" size="26px"/>
-                        <Icon name="vscode-icons:file-type-nuxt" size="26px"/>
-                        <Icon name="skill-icons:typescript" size="26px"/>
+                        <span class="text-base font-bold tracking-wide text-white">Rede Social</span>
+                        <div class="flex items-center mt-1 space-x-3">
+                            <a href="/" class="text-gray-400 transition-colors duration-300 hover:text-deep-purple-accent-400">
+                            <svg viewBox="0 0 30 30" fill="currentColor" class="h-6">
+                                <circle cx="15" cy="15" r="4"></circle>
+                                <path
+                                d="M19.999,3h-10C6.14,3,3,6.141,3,10.001v10C3,23.86,6.141,27,10.001,27h10C23.86,27,27,23.859,27,19.999v-10   C27,6.14,23.859,3,19.999,3z M15,21c-3.309,0-6-2.691-6-6s2.691-6,6-6s6,2.691,6,6S18.309,21,15,21z M22,9c-0.552,0-1-0.448-1-1   c0-0.552,0.448-1,1-1s1,0.448,1,1C23,8.552,22.552,9,22,9z"
+                                ></path>
+                            </svg>
+                            </a>
+                        </div>
                     </div>
-                    <a class="mb-4" href="https://text-to-carousel.vercel.app/" target="_blank" rel="noopener noreferrer">
-                        <button
-                            type="button"
-                            class="inline-block rounded bg-green-800 px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-white "
-                            data-te-ripple-init
-                            data-te-ripple-color="light">
-                            Demo
-                        </button>
-                    </a>
                 </div>
+                <div class="flex flex-col-reverse justify-between pt-5 pb-10 border-t lg:flex-row">
+                    <p class="text-sm text-gray-600">
+                    © Copyright 2020 Lorem Inc. All rights reserved.
+                    </p>
+                    <ul class="flex flex-col mb-3 space-y-2 lg:mb-0 sm:space-y-0 sm:space-x-5 sm:flex-row">
+                    <li>
+                        <a href="/" class="text-sm text-gray-600 transition-colors duration-300 hover:text-deep-purple-accent-400">F.A.Q</a>
+                    </li>
+                    <li>
+                        <a href="/" class="text-sm text-gray-600 transition-colors duration-300 hover:text-deep-purple-accent-400">Home</a>
+                    </li>
+                    </ul>
                 </div>
             </div>
         </div>
-        <div class="flex h-screen justify-center items-center my-5 mx-5 bg-gradient-to-r from-slate-900 to-stone-900 icon px-5 py-12" ref="others" v-motion-slide-visible-once-bottom :delay="500">
-            <div>
-                <a class="mr-2" href="https://dev.to/brunopanassi" target="_blank" rel="noopener noreferrer">
-                    <Icon name="fa6-brands:dev" size="42px"/>
-                </a>
-                <a href="https://stackoverflow.com/users/15636147/brunopanassi" target="_blank" rel="noopener noreferrer">
-                    <Icon name="devicon:stackoverflow" size="42px"/>
-                </a>
-            </div>
-        </div>
+    </div>
 </template>
 
 <script setup lang="ts">
@@ -475,7 +434,7 @@ const questionsAndAnswers = [
     },
     {
         question: "Qual o preço mínimo para um projeto?",
-        answer: "O preço pode começar em 800$, podendo variar de acordo com a sua prioridade."
+        answer: "O preço pode começar em R$800, podendo variar de acordo com a sua prioridade e complexidade."
     }
 ]
 
