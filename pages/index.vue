@@ -98,13 +98,13 @@
                 </div>
             </div>
         </div>
-        <div class="flex h-screen my-5 mx-5 text-white p-12 justify-center items-center bg-gradient-to-r from-slate-900 to-stone-900">
+        <div class="flex my-5 mx-5 text-white p-12 justify-center items-center bg-gradient-to-r from-slate-900 to-stone-900">
             <div class="container mx-auto max-w-5xl flex gap-12 flex-wrap items-start justify-center md:justify-between">
                 <div class="grid gap-4 justify-items-center text-center md:flex-1">
                     <div class=" rounded-full border-8 border-amber-900 p-4 ">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-award w-14 h-14"><path d="m15.477 12.89 1.515 8.526a.5.5 0 0 1-.81.47l-3.58-2.687a1 1 0 0 0-1.197 0l-3.586 2.686a.5.5 0 0 1-.81-.469l1.514-8.526"/><circle cx="12" cy="8" r="6"/></svg>
                     </div>
-                    <h3 class="text-3xl font-bold">SEO</h3>
+                    <h3 class="text-xl font-bold">SEO</h3>
                     <p>Otimização para melhorar a sua posição na busca orgânica</p>
                 </div>
                 <div class="grid gap-4 justify-items-center text-center md:flex-1">
@@ -115,7 +115,7 @@
                                 d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z"></path>
                         </svg>
                     </div>
-                    <h3 class="text-3xl font-bold">Eficiência</h3>
+                    <h3 class="text-xl font-bold">Performance</h3>
                     <p>Sua página carregada em menos de 2 segundos.</p>
                 </div>
                 <div class="grid gap-4 justify-items-center text-center md:flex-1">
@@ -123,7 +123,7 @@
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-hourglass w-14 h-14"><path d="M5 22h14"/><path d="M5 2h14"/><path d="M17 22v-4.172a2 2 0 0 0-.586-1.414L12 12l-4.414 4.414A2 2 0 0 0 7 17.828V22"/><path d="M7 2v4.172a2 2 0 0 0 .586 1.414L12 12l4.414-4.414A2 2 0 0 0 17 6.172V2"/></svg>
 
                     </div>
-                    <h3 class="text-3xl font-bold">Prioridade</h3>
+                    <h3 class="text-xl font-bold">Prioridade</h3>
                     <p>Foco em projetos para quem precisa de uma página pra ontem</p>
                 </div>
             </div>
@@ -195,7 +195,7 @@
                 </div>
             </div>
         </div>
-        <div class="h-screen justify-center items-center space-y-6 py-12 md:py-12 lg:py-60 px-12 bg-gradient-to-r from-slate-900 to-stone-900 my-5 mx-5 text-white">
+        <div class="justify-center items-center space-y-6 py-12 md:py-12 lg:py-60 px-12 bg-gradient-to-r from-slate-900 to-stone-900 my-5 mx-5 text-white">
             <div class="mx-auto flex max-w-[58rem] flex-col items-center space-y-4 text-center">
                 <h2 class="font-heading text-3xl leading-[1.1] sm:text-3xl md:text-4xl">O que posso fazer por você</h2>
                 <p class="max-w-[85%] leading-normal text-muted-foreground sm:text-lg sm:leading-7">Qual seria a sua necessidade para o seu negócio.</p>
@@ -236,8 +236,8 @@
                     <h2 class="font-heading text-3xl leading-[1.1] md:text-4xl mb-12">Sobre mim</h2>
                 </div>
                 <div class="card md:flex max-w-3xl">
-                    <div class="border rounded-xl h-60 w-60 mx-auto md:mr-6 mb-4 flex-shrink-0 bg-stone-900">
-                        <img src="../images/perfil_careca-removebg-preview.png" alt="" />
+                    <div class="border h-60 w-60 mx-auto md:mr-6 mb-4 flex-shrink-0">
+                        <img src="../images/perfil_enhanced.jpeg" alt="" />
                     </div>
                     <div class="flex-grow text-center md:text-left">
                         <p class="font-thin text-lg sm:text-2xl">Desenvolvedor Full Stack Pleno</p>
@@ -274,6 +274,7 @@
                                 <Icon 
                                     v-for="(tech) of stack.techs" 
                                     :name="tech"
+                                    size="24"
                                 />
                             </div>
                         </div>
