@@ -133,7 +133,7 @@
                 <div class="max-w-2xl mx-auto text-center">
                     <h2 class="font-heading text-3xl leading-[1.1] md:text-4xl">O método criado para dar foco no seu projeto</h2>
                     <p class="max-w-2xl mx-auto mt-4 text-base text-gray-400 leading-relaxed md:text-2xl">
-                        Baseado apenas nesses 5 passos
+                        Baseado em apenas 5 passos
                     </p>
                 </div>
                 <div class="relative mt-12 lg:mt-20">
@@ -158,7 +158,7 @@
                             </div>
                             <h3 class="mt-6 text-xl text-white font-semibold leading-tight md:mt-10">Brainstorming</h3>
                             <p class="mt-4 text-base text-gray-400 md:text-lg">
-                                Avaliação da sua necessidade no momento e como podemos apresentar a sua marca.
+                                Avaliação da sua necessidade por prioridades, e apresentação da sua marca.
                             </p>
                         </div>
                         <div>
@@ -168,7 +168,7 @@
                             </div>
                             <h3 class="mt-6 text-xl text-white font-semibold leading-tight md:mt-10">Aprovação</h3>
                             <p class="mt-4 text-base text-gray-400 md:text-lg">
-                                Com o projeto aprovado damos início de acordo com a sua urgência
+                                Com o alinhamento de idéias damos início ao projeto.
                             </p>
                         </div>
                         <div>
@@ -178,7 +178,7 @@
                             </div>
                             <h3 class="mt-6 text-xl text-white font-semibold leading-tight md:mt-10">Revisão</h3>
                             <p class="mt-4 text-base text-gray-400 md:text-lg">
-                                Assim que o projeto estiver 80% pronto é mostrado para opiniões e devidas alterações
+                                Alinhamento ao final do projeto para possíveis alterações
                             </p>
                         </div>
                         <div>
@@ -186,9 +186,9 @@
                                 class="flex items-center justify-center w-16 h-16 mx-auto bg-white border-2 border-gray-200 rounded-full shadow">
                                 <span class="text-xl font-semibold text-gray-700">5</span>
                             </div>
-                            <h3 class="mt-6 text-xl text-white font-semibold leading-tight md:mt-10">Acompanhamento</h3>
+                            <h3 class="mt-6 text-xl text-white font-semibold leading-tight md:mt-10">Entrega</h3>
                             <p class="mt-4 text-base text-gray-400 md:text-lg">
-                                Após a entrega é feito o acompanhamento durante 7 dias para avaliação de performance.
+                                Projeto concluído e pronto para entrega.
                             </p>
                         </div>
                     </div>
@@ -197,8 +197,7 @@
         </div>
         <div class="justify-center items-center space-y-6 py-12 md:py-12 lg:py-60 px-12 bg-gradient-to-r from-slate-900 to-stone-900 my-5 mx-5 text-white">
             <div class="mx-auto flex max-w-[58rem] flex-col items-center space-y-4 text-center">
-                <h2 class="font-heading text-3xl leading-[1.1] sm:text-3xl md:text-4xl">O que posso fazer por você</h2>
-                <p class="max-w-[85%] leading-normal text-muted-foreground sm:text-lg sm:leading-7">Qual seria a sua necessidade para o seu negócio.</p>
+                <h2 class="font-heading text-3xl leading-[1.1] sm:text-3xl md:text-4xl">Facilite a sua idéia</h2>
             </div>
             <div class="mx-auto grid justify-center gap-4 sm:grid-cols-2 md:max-w-[64rem] md:grid-cols-3" v-motion-slide-visible-once-right :delay="500">
                 <div class="relative overflow-hidden rounded-lg lg:border bg-background p-2">
@@ -206,7 +205,7 @@
                         <svg width="42" height="42" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-mails"><rect width="16" height="13" x="6" y="4" rx="2"/><path d="m22 7-7.1 3.78c-.57.3-1.23.3-1.8 0L6 7"/><path d="M2 8v11c0 1.1.9 2 2 2h14"/></svg>
                         <div class="space-y-2">
                             <h3 class="font-bold">WaitLists</h3>
-                            <p class="text-sm text-muted-foreground">Coletar e-mails de leads para o lançamento do seu novo produto.</p>
+                            <p class="text-sm text-muted-foreground">Colete e-mails de leads para o lançamento do seu novo produto.</p>
                         </div>
                     </div>
                 </div>
@@ -215,7 +214,7 @@
                         <svg width="42" height="42" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-calendar"><path d="M8 2v4"/><path d="M16 2v4"/><rect width="18" height="18" x="3" y="4" rx="2"/><path d="M3 10h18"/></svg>
                         <div class="space-y-2">
                             <h3 class="font-bold">Agendamento</h3>
-                            <p class="text-sm text-muted-foreground">Integração com o Calendly para facilitar a sua vida.</p>
+                            <p class="text-sm text-muted-foreground">Integração com ferramenta para organização e acessibilidade.</p>
                         </div>
                     </div>
                 </div>
@@ -224,7 +223,7 @@
                         <svg width="42" height="42" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-message-circle"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></svg>
                         <div class="space-y-2">
                             <h3 class="font-bold">Redirecionamento</h3>
-                            <p class="text-sm text-muted-foreground">Deixe a melhor forma para que o seu cliente possa contatar você.</p>
+                            <p class="text-sm text-muted-foreground">Opções práticas para que seu cliente chegue até você.</p>
                         </div>
                     </div>
                 </div>
@@ -237,11 +236,10 @@
                 </div>
                 <div class="card md:flex max-w-3xl">
                     <div class="border h-60 w-60 mx-auto md:mr-6 mb-4 flex-shrink-0">
-                        <img src="../images/perfil_enhanced.jpeg" alt="" />
+                        <img src="../images/perfil_enhanced.jpeg" alt="bruno_panassi_perfil" />
                     </div>
                     <div class="flex-grow text-center md:text-left">
                         <p class="font-thin text-lg sm:text-2xl">Desenvolvedor Full Stack Pleno</p>
-                        <p class="font-bold text-xl sm:text-3xl">bruno.panassi</p>
                         <p class="font-thin text-lg sm:text-3xl mt-2 mb-3">Experiência criando aplicações web para grandes empresas. Expertise em Landing Page com foco em performance.</p>
                         <div class="text-black space-x-2">
                             <button class="text-white border px-3 py-1.5 rounded-lg text-base">
@@ -286,8 +284,7 @@
             <div class="mx-auto">
                 <div class="card max-w-3xl">
                     <div class=" mx-auto text-center items-center justify-center">
-                        <p class="text-4xl font-semibold">Agende uma call</p>
-                        <p class="text-lg font-thin">Vamos bater um papo e entender mais sobre o que você precisa, sem compromisso.</p> 
+                        <p class="text-4xl font-semibold">Agende uma reunião para alinharmos as suas necessidades</p>
                         <button class="mt-6 space-x-2 bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded inline-flex items-center">
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-calendar"><path d="M8 2v4"/><path d="M16 2v4"/><rect width="18" height="18" x="3" y="4" rx="2"/><path d="M3 10h18"/></svg>
                             <CalendlyPopupButton v-bind="calendlyOptions" :root-element="roofElement"/>
@@ -302,7 +299,7 @@
                 <div class="card max-w-3xl">
                     <div class="mx-auto text-center items-center justify-center">
                         <p class="text-4xl font-semibold">Tire a sua idéia do papel</p>
-                        <p class="text-lg font-thin mb-6">A sua nova página está á um clique de distância</p> 
+                        <p class="text-lg font-thin mb-6">A sua nova página está a um clique de distância</p> 
                         <a 
                             href="https://wa.me/5518997648833?text=Oi!%20Estou%20interessado%20em%20seus%20servi%C3%A7os%20e%20gostaria%20de%20saber%20mais%20sobre%20isso.%20Voc%C3%AA%20poderia%20me%20enviar%20mais%20informa%C3%A7%C3%B5es?%20Obrigado!" 
                             target="_blank" rel="noopener noreferrer"
@@ -412,7 +409,7 @@ const roofElement = ref()
 
 const calendlyOptions = {
     url: 'https://calendly.com/bhenrique95?hide_gdpr_banner=1',
-    text: "Agendar"
+    text: "A 1ª reunião é gratuita"
 }
 
 const questionsAndAnswers = [
