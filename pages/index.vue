@@ -99,7 +99,7 @@
             </div>
         </div>
         <div class="flex my-5 mx-5 text-white p-12 justify-center items-center bg-gradient-to-r from-slate-900 to-stone-900">
-            <div class="container mx-auto max-w-5xl flex gap-12 flex-wrap items-start justify-center md:justify-between">
+            <div class="container mx-auto max-w-5xl flex gap-12 flex-wrap items-start justify-center md:justify-between py-12">
                 <div class="grid gap-4 justify-items-center text-center md:flex-1">
                     <div class=" rounded-full border-8 border-amber-900 p-4 ">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-award w-14 h-14"><path d="m15.477 12.89 1.515 8.526a.5.5 0 0 1-.81.47l-3.58-2.687a1 1 0 0 0-1.197 0l-3.586 2.686a.5.5 0 0 1-.81-.469l1.514-8.526"/><circle cx="12" cy="8" r="6"/></svg>
@@ -210,7 +210,7 @@
                     </div>
                 </div>
                 <div class="relative overflow-hidden rounded-lg lg:border bg-background p-2">
-                    <div class="flex h-[180px] flex-col justify-between rounded-md p-6">
+                    <div class="flex h-[180px] flex-col justify-between rounded-md pl-6 py-6">
                         <svg width="42" height="42" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-calendar"><path d="M8 2v4"/><path d="M16 2v4"/><rect width="18" height="18" x="3" y="4" rx="2"/><path d="M3 10h18"/></svg>
                         <div class="space-y-2">
                             <h3 class="font-bold">Agendamento</h3>
@@ -239,8 +239,8 @@
                         <img src="../images/perfil_enhanced.jpeg" alt="bruno_panassi_perfil" />
                     </div>
                     <div class="flex-grow text-center md:text-left">
-                        <p class="font-thin text-lg sm:text-2xl">Desenvolvedor Full Stack Pleno</p>
-                        <p class="font-thin text-lg sm:text-3xl mt-2 mb-3">Experiência criando aplicações web para grandes empresas. Expertise em Landing Page com foco em performance.</p>
+                        <p class="font-light text-md sm:text-2xl">Desenvolvedor Full Stack Pleno</p>
+                        <p class="font-thin text-lg sm:text-2xl mt-2 mb-3">Experiência criando aplicações web para grandes empresas. Expertise em Landing Page com foco em performance.</p>
                         <div class="text-black space-x-2">
                             <button class="text-white border px-3 py-1.5 rounded-lg text-base">
                                 <a href="https://www.linkedin.com/in/bruno-henrique-panassi/" target="_blank" rel="noopener noreferrer">
@@ -280,11 +280,11 @@
                 </div>
             </div>
         </div>
-        <div class="flex my-5 mx-5 text-white p-12 lg:py-32 justify-center items-center bg-gradient-to-r from-slate-900 to-neutral-900">
+        <div class="flex my-5 mx-5 text-white py-32 lg:py-32 justify-center items-center bg-gradient-to-r from-slate-900 to-neutral-900">
             <div class="mx-auto">
                 <div class="card max-w-3xl">
                     <div class=" mx-auto text-center items-center justify-center">
-                        <p class="text-4xl font-semibold">Agende uma reunião para alinharmos as suas necessidades</p>
+                        <p class="text-2xl md:text-4xl font-semibold">Agende uma reunião <br/> para alinharmos <br/> as suas necessidades</p>
                         <button class="mt-6 space-x-2 bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded inline-flex items-center">
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-calendar"><path d="M8 2v4"/><path d="M16 2v4"/><rect width="18" height="18" x="3" y="4" rx="2"/><path d="M3 10h18"/></svg>
                             <CalendlyPopupButton v-bind="calendlyOptions" :root-element="roofElement"/>
@@ -298,14 +298,14 @@
             <div class="mx-auto">
                 <div class="card max-w-3xl">
                     <div class="mx-auto text-center items-center justify-center">
-                        <p class="text-4xl font-semibold">Tire a sua idéia do papel</p>
+                        <p class="text-2xl md:text-4xl font-semibold">Tire a sua idéia do papel</p>
                         <p class="text-lg font-thin mb-6">A sua nova página está a um clique de distância</p> 
                         <a 
                             href="https://wa.me/5518997648833?text=Oi!%20Estou%20interessado%20em%20seus%20servi%C3%A7os%20e%20gostaria%20de%20saber%20mais%20sobre%20isso.%20Voc%C3%AA%20poderia%20me%20enviar%20mais%20informa%C3%A7%C3%B5es?%20Obrigado!" 
                             target="_blank" rel="noopener noreferrer"
-                            class="block w-full rounded-lg bg-emerald-900 px-6 pb-2 pt-2.5 text-sm font-medium uppercase leading-normal text-white shadow-primary-3 hover:bg-emerald-800"
+                            class="block w-full rounded-lg bg-emerald-900 p-6 text-sm font-medium uppercase leading-normal text-white shadow-primary-3 hover:bg-emerald-800"
                         >
-                            Me Interesso
+                            Quero agora
                         </a>
                     </div>
                 </div>
