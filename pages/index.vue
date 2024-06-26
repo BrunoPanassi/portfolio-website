@@ -504,6 +504,7 @@ useHead({
     meta: [
         { name: 'description', content: 'Com um método em apenas 5 passos você tem a sua landing page com alta performance e responsiva para a sua necessidade do momento.'}
     ],
+    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
     htmlAttrs: {
         class: 'html-custom'
     },
