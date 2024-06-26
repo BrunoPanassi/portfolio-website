@@ -500,12 +500,16 @@ const blockRefToGo = [
 ]
 
 useHead({
-  htmlAttrs: {
-    class: 'html-custom'
-  },
-  bodyAttrs: {
-    class: 'body-custom'
-  }
+    title: "Bruno Panassi | Landing pages com foco na sua prioridade",
+    meta: [
+        { name: 'description', content: 'Com um método em apenas 5 passos você tem a sua landing page com alta performance e responsiva para a sua necessidade do momento.'}
+    ],
+    htmlAttrs: {
+        class: 'html-custom'
+    },
+    bodyAttrs: {
+        class: 'body-custom'
+    }
 })
 
 function goTo(idSection: string) {
