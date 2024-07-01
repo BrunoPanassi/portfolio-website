@@ -86,13 +86,14 @@
                                 type="button"
                                 class="inline-block rounded-lg bg-green-900 px-6 pb-2 pt-2.5 text-sm font-medium uppercase leading-normal text-white shadow-primary-3 transition duration-150 ease-in-out hover:bg-primary-accent-300 hover:shadow-primary-2 focus:bg-primary-accent-300 focus:shadow-primary-2 focus:outline-none focus:ring-0 active:bg-primary-600 active:shadow-primary-2 motion-reduce:transition-none dark:shadow-black/30 dark:hover:shadow-dark-strong dark:focus:shadow-dark-strong dark:active:shadow-dark-strong"
                                 @click="goTo('cta')">
-                                    Me interesso
+                                    Quero agora
                                 </button>
                             </div>
                         </div>
                         <div>
-                            <img src="../images/mobile_mockup.jpeg"
-                                class="w-full rounded-lg shadow-lg dark:shadow-black/20" alt="" />
+                            <img src="../images/mobile_mockup.webp"
+                                class="w-full rounded-lg shadow-lg dark:shadow-black/20" alt="mobile_website" 
+                                width="auto" height="auto"/>
                         </div>
                     </div>
                 </div>
@@ -138,7 +139,7 @@
                 </div>
                 <div class="relative mt-12 lg:mt-20">
                     <div class="absolute inset-x-0 hidden xl:px-44 top-2 lg:block md:px-20 lg:px-28">
-                        <img alt="" loading="lazy" width="1000" height="500" decoding="async" data-nimg="1" class="w-full" style="color:transparent" src="https://cdn.rareblocks.xyz/collection/celebration/images/steps/2/curved-dotted-line.svg">
+                        <curvedDottedLine />
                     </div>
                     <div class="relative grid grid-cols-1 text-center gap-y-12 lg:grid-cols-5 gap-x-12">
                         <div>
@@ -236,7 +237,7 @@
                 </div>
                 <div class="card md:flex max-w-3xl">
                     <div class="border h-60 w-60 mx-auto md:mr-6 mb-4 flex-shrink-0">
-                        <img src="../images/perfil_enhanced.jpeg" alt="bruno_panassi_perfil" />
+                        <img src="../images/perfil_enhanced.webp" alt="bruno_panassi_perfil" width="auto" height="auto" />
                     </div>
                     <div class="flex-grow text-center md:text-left">
                         <p class="font-light text-md sm:text-2xl">Desenvolvedor Full Stack Pleno</p>
@@ -393,6 +394,7 @@
 
 <script setup lang="ts">
 import brunoPanassiIcon from "~/icons/brunoPanassiIcon.vue"
+import curvedDottedLine from "~/icons/curvedDottedLine.vue";
 
 function onToggle() {
     const mobileMenu = document.getElementById('mobile-menu');
